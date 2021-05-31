@@ -3,7 +3,7 @@ Web-based order management application for home decor store (ASP.NET Core MVC, M
 
 ## 1. Background
 
-Created during fall term 2020 as course assignment. Part of higher vocational education: Webbutvecklare .NET (Web Developer .NET), 2020-2022, Jönköping University, Sweden.  
+Built during fall term 2020 as course assignment. Part of higher vocational education: Webbutvecklare .NET (Web Developer .NET), 2020-2022, Jönköping University, Sweden.  
 Name of course: Dynamiska Webbapplikationer 1 (Dynamic Web Applications 1)
 
 ## 2. Technologies/techniques used
