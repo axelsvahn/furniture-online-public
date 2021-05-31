@@ -23,8 +23,8 @@ I learned how to use, or increased my understanding of, the technologies and con
 
 ### Using Visual Studio 2019:
 
-The application can be run using Visual Studio 2019 by accessing it through the solution file and clicking the "run" button after
-first restoring the project dependencies. The MSSQL database has been set to InMemory mode to facilitate running the app on various systems.
+The application can be run using Visual Studio 2019 by accessing it through the solution file and clicking the "run" button.
+Depending on your setup, it may be necessary to manually restore dependencies first. The MSSQL database has been set to InMemory mode to facilitate running the app on various systems.
 
 Register as "ingrid@ballong.se" using a password of your choice and navigate to "visa projekt" to test admin functionality. Two
 pre-seeded projects will be shown, along with the total cost.
