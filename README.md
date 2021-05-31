@@ -17,14 +17,16 @@ Name of course: Dynamiska Webbapplikationer 1 (Dynamic Web Applications 1)
 
 ## 3. What I learned
 
-I learned how to use, or increased my understanding of, the technologies and concepts listed above.
+I learned how to use and/or increased my understanding of the technologies and concepts listed above.
 
-## 4. How to use
+## 4. Try it out!
 
 ### Using Visual Studio 2019:
 
 The application can be run using Visual Studio 2019 by accessing it through the solution file and clicking the "run" button.
-Depending on your setup, it may be necessary to manually restore dependencies first. The MSSQL database has been set to InMemory mode to facilitate running the app on various systems.
+It should not be necessary to manually restore any dependencies. 
+The project is set up to target .NET Core 3.1 but seems to run fine on .NET 5.
+The MSSQL database has been set to InMemory mode to simplify testing the app on various systems.
 
 Register as "ingrid@ballong.se" using a password of your choice and navigate to "visa projekt" to test admin functionality. Two
 pre-seeded projects will be shown, along with the total cost.
