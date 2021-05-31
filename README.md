@@ -1,5 +1,5 @@
 # Inredning Online
-Web-based order management application for home decor store (ASP.NET Core MVC, MSSQL, xUnit)
+Web-based order management application for office decor store (ASP.NET Core MVC, MSSQL, xUnit)
 
 ## 1. Background
 
