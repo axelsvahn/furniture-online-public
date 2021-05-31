@@ -1,0 +1,62 @@
+﻿@using Inredning.ViewModels;
+@using Microsoft.AspNetCore.Identity
+@model OrderPageViewModel
+@inject SignInManager<User> SignInManager
+@inject UserManager<User> UserManager
+
+@{
+    ViewData["Title"] = "Visa projekt";
+}
+
+<div class="row">
+    <div class="col-md-7">
+        @foreach (var project in Model.Projects)
+        {
+            var currentId = project.ProjectId;
+            <div>
+                <h4>@project.ProjectName</h4>
+                <h5>Inredare: @project.DecoratorEmail</h5>
+                <h6>Projektkostnad: @Model.ProjectRepository.GetProjectCost(currentId).ToString("C")</h6>
+                <h6>Projekt-id: @project.ProjectId</h6>
+                <ol>
+                    @foreach (var orderitem in Model.OrderItems)
+                    {
+                        if (orderitem.ProjectId.Equals(currentId))
+                        {
+                            <li>
+                                @orderitem.Name
+                                <ul>
+                                    <li>Id: @orderitem.OrderItemId</li>
+                                    <li>Leverantör: @orderitem.Supplier</li>
+                                    <li>Pris per styck: @orderitem.IndividualPrice.ToString("C")</li>
+                                    <li>Antal: @orderitem.Amount</li>
+                                    <li>Ytterligare information: @orderitem.Info</li>
+                                </ul>
+                            </li>
+                        }
+                    }
+                </ol>
+            </div>
+        }
+
+    </div>
+
+    @if (SignInManager.IsSignedIn(User) && UserManager.GetUserName(User) == "ingrid@ballong.se")
+    {
+        <div class="col-md-5">
+            <div id="costs">
+
+                <h5>
+                    Total kostnad för alla projekt: @Model.ProjectRepository.AllProjectsCost.ToString("C")
+                </h5>
+                <h5>
+                    Genomsnittlig kostnad för ett projekt: @Model.ProjectRepository.AverageProjectCost.ToString("C")
+                </h5>
+            </div>
+        </div>
+    }
+</div>
+<div id="go-back">
+    <a asp-controller="OrderPage" asp-action="Menu">Tillbaka till menyn</a>
+</div>
+

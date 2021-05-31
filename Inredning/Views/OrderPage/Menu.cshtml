@@ -1,0 +1,26 @@
+﻿@*@model OrderPageViewModel*@
+
+@{
+    ViewData["Title"] = "Beställningar";
+}
+
+<h2>Beställningar</h2>
+<div>
+    <p>Välj alternativ genom att klicka på de undre länkarna.</p>
+    <br />
+    <h4>
+        <a asp-controller="OrderPage" asp-action="ViewProjects">Se existerande projekt</a>
+    </h4>
+    <h4>
+        <a asp-controller="OrderPage" asp-action="CreateProject">Skapa ett nytt projekt</a>
+    </h4>
+    <h4>
+        <a asp-controller="OrderPage" asp-action="CreateOrderItem">Skapa en ny orderrad</a>
+    </h4>
+    <h4>
+        <a asp-controller="OrderPage" asp-action="SelectProject">Välj ett projekt att redigera</a>
+    </h4>
+    <h4>
+        <a asp-controller="OrderPage" asp-action="SelectOrderItem">Välj en orderrad att redigera</a>
+    </h4>
+</div>

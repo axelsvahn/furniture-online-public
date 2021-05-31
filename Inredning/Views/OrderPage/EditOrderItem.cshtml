@@ -1,0 +1,67 @@
+﻿@model OrderItem
+
+@{
+    ViewData["Title"] = "Ändra existerade orderrad";
+}
+
+<form asp-action="EditOrderItem" method="post" class="form-horizontal" role="form">
+    <h2>Ändra existerade orderrad</h2>
+    <h5>OBS: Ändra inte på "Materialets namn"!</h5>
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="Name" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ProjectId" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="ProjectId" class="form-control" />
+            <span asp-validation-for="ProjectId" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Supplier" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="Supplier" class="form-control" />
+            <span asp-validation-for="Supplier" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="IndividualPrice" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="IndividualPrice" class="form-control" />
+            <span asp-validation-for="IndividualPrice" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Amount" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="Amount" class="form-control" />
+            <span asp-validation-for="Amount" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Info" class="col-md-3 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="Info" class="form-control" />
+            <span asp-validation-for="Info" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-5">
+            <input type="submit" class="btn btn-dark" value="Uppdatera orderrad" />
+        </div>
+    </div>
+
+</form>

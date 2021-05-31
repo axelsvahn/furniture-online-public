@@ -1,0 +1,78 @@
+﻿@model OrderItem
+
+@{
+    ViewData["Title"] = "Skapa ny orderrad";
+}
+
+<form asp-action="CreateOrderItem" method="post" class="form-horizontal" role="form">
+    <h2>Skapa ny orderrad</h2>
+    <h4>För att koppla orderrad till ett projekt:</h4>
+    <ol>
+        <li>
+            Skapa först projektet via "Skapa nytt projekt".
+        </li>
+        <li>
+            Notera projektets automatiskt tilldelade id som visas under "Se existerande projekt".
+        </li>
+        <li>
+            Ange detta id i undre formulär.
+        </li>
+    </ol>
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="Name" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ProjectId" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="ProjectId" class="form-control" />
+            <span asp-validation-for="ProjectId" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Supplier" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="Supplier" class="form-control" />
+            <span asp-validation-for="Supplier" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="IndividualPrice" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="IndividualPrice" class="form-control" />
+            <span asp-validation-for="IndividualPrice" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Amount" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="Amount" class="form-control" />
+            <span asp-validation-for="Amount" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Info" class="col-md-3 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="Info" class="form-control" />
+            <span asp-validation-for="Info" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-5">
+            <input type="submit" class="btn btn-dark" value="Skapa orderrad" />
+        </div>
+    </div>
+
+</form>

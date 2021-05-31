@@ -1,0 +1,27 @@
+﻿@using Inredning.ViewModels;
+@model OrderPageViewModel
+
+@{
+    ViewData["Title"] = "Välj orderrad att redigera";
+}
+
+<div>
+    <h2>Välj orderrad att redigera</h2>
+    <br />
+
+    @foreach (var orderItem in Model.OrderItems)
+    {
+        <div>
+            <h4>
+                <a asp-controller="OrderPage" asp-action="EditOrderItem" asp-route-orderItemId="@orderItem.OrderItemId">@orderItem.Name</a>
+            </h4>
+            <a asp-controller="OrderPage" asp-action="DeleteOrderItem" asp-route-orderItemId="@orderItem.OrderItemId">Ta bort orderraden</a>
+        </div>
+    }
+</div>
+<br />
+<div id="go-back">
+    <h5>
+        <a asp-controller="OrderPage" asp-action="Menu">Tillbaka till menyn</a>
+    </h5>
+</div>

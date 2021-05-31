@@ -1,0 +1,28 @@
+﻿@using Inredning.ViewModels;
+@model OrderPageViewModel
+
+@{
+    ViewData["Title"] = "Välj projekt att redigera";
+}
+
+<div>
+    <h2>Välj projekt</h2>
+    <h5>OBS: Om du tar bort ett projekt, kom ihåg att även ta bort dess orderrader separat!</h5>
+    <br />
+
+    @foreach (var project in Model.Projects)
+    {
+        <div>
+            <h4>
+                <a asp-controller="OrderPage" asp-action="EditProject" asp-route-projectId="@project.ProjectId">@project.ProjectName</a>
+            </h4>
+            <a asp-controller="OrderPage" asp-action="DeleteProject" asp-route-projectId="@project.ProjectId">Ta bort projektet</a>
+        </div>
+    }
+</div>
+<br />
+<div id="go-back">
+    <h5>
+        <a asp-controller="OrderPage" asp-action="Menu">Tillbaka till menyn</a>
+    </h5>
+</div>
