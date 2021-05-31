@@ -12,7 +12,7 @@ Name of course: Dynamiska Webbapplikationer 1 (Dynamic Web Applications 1)
 * ASP.NET Core Identity for authentication and authorization
 * Entity Framework Core for relational database management (MSSQL v13)
 * xUnit for unit testing
-* Twitter Bootstrap (4.6) for styling of frontend
+* Twitter Bootstrap (v4.6) for styling of frontend
 * Various principles and practices such as dependency injection, Repository and Model-View-Controller patterns and separation of concerns.  
 
 ## 3. What I learned
