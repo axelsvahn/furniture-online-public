@@ -26,7 +26,7 @@ I learned how to use and/or increased my understanding of the technologies and c
 The application can be run using Visual Studio 2019 by accessing it through the solution file and clicking the "run" button.
 It should not be necessary to manually restore any dependencies. 
 The project is set up to target .NET Core 3.1 but seems to run fine on .NET 5.
-The MSSQL database has been set to InMemory mode to simplify testing the app on various systems.
+Entity Framework Core has been set to InMemory mode to simplify testing the app on various systems.
 
 Register as "ingrid@ballong.se" using a password of your choice and navigate to "visa projekt" to test admin functionality. Two
 pre-seeded projects will be shown, along with the total cost.
